@@ -1,0 +1,17 @@
+.navigation {
+    width: 100%;
+    position : fixed;
+    bottom : 0;
+    left : 0;
+}
+
+.navigation .action {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.navigation .action .action-icon {
+    margin-bottom: 0.5rem;
+}

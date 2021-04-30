@@ -1,3 +1,11 @@
 .App {
   text-align: center;
+  height: 100%;
+  background-color: #fdf8f3;
+  
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
 }

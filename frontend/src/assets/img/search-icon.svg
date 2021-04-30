@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.333" height="13.333" viewBox="0 0 13.333 13.333">
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-1.333 -1.333)">
+    <path id="Caminho_1" data-name="Caminho 1" d="M14.667,6.667A5.333,5.333,0,1,1,9.333,1.333,5.333,5.333,0,0,1,14.667,6.667Zm-9.333,0a4,4,0,1,0,4-4A4,4,0,0,0,5.333,6.667Z" fill="#dcd8d8" fill-rule="evenodd"/>
+    <path id="Caminho_2" data-name="Caminho 2" d="M3.862,11.2,1.529,13.529a.667.667,0,0,0,.943.943L4.8,12.138a.667.667,0,1,0-.943-.943Z" fill="#f0f0f0"/>
+    <circle id="Elipse_1" data-name="Elipse 1" cx="0.667" cy="0.667" r="0.667" transform="translate(8.667 6)" fill="#f0f0f0"/>
+  </g>
+</svg>
