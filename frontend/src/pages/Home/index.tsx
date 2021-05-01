@@ -1,13 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './styles.css';
 
 import SearchIcon from '../../assets/img/search-icon.svg';
 import HandIcon from '../../assets/img/hand.svg';
-
-// import HomeIcon from '../../assets/img/home.svg';
-// import AddIcon from '../../assets/img/add-icon.svg';
-// import UserIcon from '../../assets/img/user.svg';
+import Book from '../../components/Book';
 
 const Home: React.FC = () => {
   return (
@@ -35,93 +32,22 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="content">
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/51fs1YC1VNL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">The One Thing</h1>
-            <h2 className="author">by Gary Keller</h2>
-          </div>
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81fcWvYdukL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">HOOKED</h1>
-            <h2 className="author">by Nir Eyal</h2>
-          </div>
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81cOrVseOYL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">Good to Great</h1>
-            <h2 className="author">by Jim Collins</h2>
-          </div>
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/51fs1YC1VNL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">The One Thing</h1>
-            <h2 className="author">by Gary Keller</h2>
-          </div>
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81fcWvYdukL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">HOOKED</h1>
-            <h2 className="author">by Nir Eyal</h2>
-          </div>
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81cOrVseOYL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">Good to Great</h1>
-            <h2 className="author">by Jim Collins</h2>
-          </div>
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/51fs1YC1VNL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">The One Thing</h1>
-            <h2 className="author">by Gary Keller</h2>
-          </div>
-          <div className="book">
-            <img
-              src="https://images-na.ssl-images-amazon.com/images/I/81fcWvYdukL.jpg"
-              alt="The book cover"
-              className="cover"
-            />
-            <h1 className="title">HOOKED</h1>
-            <h2 className="author">by Nir Eyal</h2>
-          </div>
+          <Book
+            title="The One Thing"
+            author="Gary Keller"
+            coverURL="https://images-na.ssl-images-amazon.com/images/I/51fs1YC1VNL.jpg"
+          />
+          <Book
+            title="HOOKED"
+            author="Nir Eyal"
+            coverURL="https://images-na.ssl-images-amazon.com/images/I/81fcWvYdukL.jpg"
+          />
+          <Book
+            title="Good to Great"
+            author="Jim Collins"
+            coverURL="https://images-na.ssl-images-amazon.com/images/I/81cOrVseOYL.jpg"
+          />
         </div>
-        {/* <div className="menu">
-          <div className="button">
-            <img src={HomeIcon} alt="" className="button-icon" />
-            <span>Home</span>
-          </div>
-          <div className="button disabled">
-            <img src={AddIcon} alt="" className="button-icon" />
-            <span>Add Book</span>
-          </div>
-          <div className="button disabled">
-            <img src={UserIcon} alt="" className="button-icon" />
-            <span>Profile</span>
-          </div>
-        </div> */}
       </div>
     </article>
   );
