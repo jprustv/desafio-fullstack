@@ -34,7 +34,7 @@
 }
 
 @media only screen and (min-width: 600px) {
-    .home .container .header .search-bar {
+    .search-bar {
         width: 360px;
     }
 
