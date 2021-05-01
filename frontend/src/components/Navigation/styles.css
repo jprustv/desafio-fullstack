@@ -6,6 +6,10 @@
     padding-top: 0.1rem;
 }
 
+.navigation.disabled {
+    display : none;
+}
+
 .navigation .action {
     font-style: normal;
     font-weight: 600;

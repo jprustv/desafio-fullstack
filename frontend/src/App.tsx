@@ -1,12 +1,15 @@
 import React from 'react';
 import './App.css';
+import { NavigationProvider } from './contexts/navigation';
 
 import Routes from './routes';
 
 function App() {
   return (
     <div className="App">
-      <Routes />
+      <NavigationProvider>
+        <Routes />
+      </NavigationProvider>
     </div>
   );
 }

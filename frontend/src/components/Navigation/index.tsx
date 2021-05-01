@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -12,8 +12,12 @@ import HomeIcon from '../../assets/img/home.svg';
 import AddIcon from '../../assets/img/add-icon.svg';
 import UserIcon from '../../assets/img/user.svg';
 
+import { NavigationContext } from '../../contexts/navigation';
+
 const Navigation: React.FC = () => {
   const [selected, setSelected] = useState('home');
+
+  const { enabled } = useContext(NavigationContext);
 
   return (
     <div
@@ -28,7 +32,7 @@ const Navigation: React.FC = () => {
         onChange={(e, newValue) => {
           setSelected(newValue);
         }}
-        className="navigation"
+        className={`navigation ${enabled ? 'enabled' : 'disabled'}`}
       >
         <BottomNavigationAction
           className="action"

@@ -76,8 +76,96 @@
     top: 43px;
 }
 
-.navigation {
-    display : none!important;
+.detail .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 130px;
+    margin-top: 60px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    background : #fdf8f3;
+}
+
+.detail .content .title-container {
+    font-style: normal;
+    line-height: 29px;
+    letter-spacing: 1.5px;
+    color: #36383A;
+}
+
+.detail .content .title-container .title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.detail .content .title-container .subtitle {
+    font-size: 24px;
+}
+
+.detail .content .author {
+    color : #FF6978;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.670588px;
+    font-weight: bold;
+    margin: 0.4rem 0 0.7rem 0;
+}
+
+.detail .content .description {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    color: rgba(49, 49, 49, 0.6);
+}
+
+.detail .actions-menu {
+    position: fixed;
+    background: #FFFFFF;
+    box-shadow: 3px 3px 23px rgba(107, 103, 70, 0.125901);
+    border-radius: 2px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 85%;
+    margin: 20px 0 53px 0;
+    left: 7%;
+    height: 56px;
+}
+
+.detail .actions-menu .action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 auto;
+
+    position: relative;
+    text-align: center;
+    line-height: 40px;
+
+    cursor: pointer;
+}
+
+.detail .actions-menu .action-button + .action-button {
+    border-left: solid 1px rgba(151, 151, 151, 0.2);;
+}
+
+.detail .actions-menu .action-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.detail .actions-menu .action-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: #3F4043;
+    margin-left: 0.6rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -88,4 +176,17 @@
         left: 112px;
         top: 80px;
     }
+
+    .detail .actions-menu .action-button, .detail .header .back-button { 
+        transition: all .2s ease-in-out; 
+        cursor: pointer;
+    }
+    
+    .detail .actions-menu .action-button:hover, .detail .header .back-button:hover { 
+        transform: scale(1.2); 
+    }
 }
+
+/* .navigation {
+    display : none!important;
+} */
