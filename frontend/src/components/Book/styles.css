@@ -28,6 +28,11 @@
     margin-top: 0.2rem;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 @media only screen and (min-width: 600px) {
     .book { 
         transition: all .2s ease-in-out; 

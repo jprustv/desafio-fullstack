@@ -1,5 +1,6 @@
 [
     {
+        "_id" : 1,
         "title" : "The One Thing",
         "author" : "Gary Keller",
         "coverURL" : "https://images-na.ssl-images-amazon.com/images/I/51fs1YC1VNL.jpg",
@@ -7,6 +8,7 @@
         "description" : "The ONE Thing has made more than 200 appearances on national bestseller lists, including #1 Wall Street Journal, NewYork Times, and USA Today. It won 12 book awards, has been translated into 24 languages, chosen as one of the Top 5 Business Books of 2013 by Hudson’s Booksellers and one of Top 30 Business Books of 2013 by Executive Book Summaries. People are using this simple, powerful concept to focus on what matters most in their personal and work lives. Companies are helping their employees be more productive with study groups, training, and coaching. Sales teams are boosting sales. Churches are conducting classes and recommending from the pulpit. By focusing their energy on one thing at a time people are living more rewarding lives by building their careers, strengthening their finances, losing weight and getting in shape, deepening their faith, and nurturing stronger marriages and personal relationships."
     },
     {
+        "_id" : 2,
         "title" : "HOOKED",
         "author" : "Nir Eyal",
         "coverURL" : "https://images-na.ssl-images-amazon.com/images/I/81fcWvYdukL.jpg",
@@ -14,6 +16,7 @@
         "description" : "Why do some products capture widespread attention while others flop? What makes us engage with certain products out of sheer habit? Is there a pattern underlying how technologies hook us?\nNir Eyal answers these questions (and many more) by explaining the Hook Model—a four-step process embedded into the products of many successful companies to subtly encourage customer behavior. Through consecutive “hook cycles,” these products reach their ultimate goal of bringing users back again and again without depending on costly advertising or aggressive messaging.\nHooked is based on Eyal’s years of research, consulting, and practical experience. He wrote the book he wished had been available to him as a start-up founder—not abstract theory, but a how-to guide for building better products. Hooked is written for product managers, designers, marketers, start-up founders, and anyone who seeks to understand how products influence our behavior."
     },
     {
+        "_id" : 3,
         "title" : "Good to Great",
         "author" : "Jim Collins",
         "coverURL" : "https://images-na.ssl-images-amazon.com/images/I/81cOrVseOYL.jpg",

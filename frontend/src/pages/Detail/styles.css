@@ -1,0 +1,91 @@
+.detail .header {
+    height: 282px;
+    background : #FFF6E5;
+    border-radius: 0 0 120px 0;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.detail .cover-container {
+    width: 153px;
+    height: 229px;
+    position: absolute;
+    left: 32%;
+    top: 10%;
+}
+
+.detail .cover-container .cover {
+    width : 153px;
+    height : 229px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.detail .header .back-button {
+    position: fixed;
+    left: 1rem;
+    top: 1.6rem;
+    width: 50px;
+    height: 40px;
+}
+
+.detail .header .back-button .back-icon {
+    margin-top: 0.7rem;
+}
+
+.detail .header .waves-oval-bigger {
+    position: absolute;
+    right: 0;
+    margin-right: -50px;
+    margin-top: -30px;
+}
+
+.detail .cover-container .waves-oval-container {
+    position: absolute;
+    left: 125px;
+    top: 140px;
+    border-radius: 70px;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.detail .cover-container .waves-oval-container .waves-oval {
+    margin-left: -40px;
+    margin-top: -30px;
+}
+
+.detail .cover-container .empty-oval {
+    position: absolute;
+    left: 137px;
+    top: 1px;
+}
+
+.detail .cover-container .blue-oval {
+    position: absolute;
+    left: -40px;
+    top: 32px;
+}
+
+.detail .cover-container .red-oval {
+    position: absolute;
+    left: -67px;
+    top: 43px;
+}
+
+.navigation {
+    display : none!important;
+}
+
+@media only screen and (min-width: 600px) {
+    .detail .cover-container {
+        width: 153px;
+        height: 229px;
+        position: absolute;
+        left: 112px;
+        top: 80px;
+    }
+}

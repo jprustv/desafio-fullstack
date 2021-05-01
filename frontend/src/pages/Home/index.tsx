@@ -26,7 +26,8 @@ const Home: React.FC = () => {
           {books.map((book: BookProps) => {
             return (
               <Book
-                key={`${book.title}, by ${book.author}`}
+                key={book._id}
+                _id={book._id}
                 title={book.title}
                 author={book.author}
                 coverURL={book.coverURL}
