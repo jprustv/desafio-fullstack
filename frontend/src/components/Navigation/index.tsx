@@ -13,7 +13,7 @@ import AddIcon from '../../assets/img/add-icon.svg';
 import UserIcon from '../../assets/img/user.svg';
 
 const Navigation: React.FC = () => {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState('home');
 
   return (
     <div

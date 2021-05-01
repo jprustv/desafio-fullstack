@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles.css';
 
-interface BookProps {
+export interface BookProps {
   title: string;
   author: string;
   coverURL: string;
