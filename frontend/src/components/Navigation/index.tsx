@@ -54,11 +54,12 @@ const Navigation: React.FC = () => {
               <img src={AddIcon} alt="" height={25} width={25} />
             </Icon>
           }
-          value="addbook"
+          value="create"
           component={Link}
-          to="/addbook"
+          to="/create"
         />
         <BottomNavigationAction
+          disabled
           className="action"
           label="Profile"
           icon={
