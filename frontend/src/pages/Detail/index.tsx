@@ -33,7 +33,7 @@ const Detail: React.FC = () => {
     return function cleanUp() {
       setEnabled(true);
     };
-  }, []);
+  }, [setEnabled]);
 
   return (
     <article className="detail">
