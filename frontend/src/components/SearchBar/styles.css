@@ -37,4 +37,13 @@
     .home .container .header .search-bar {
         width: 360px;
     }
+
+    .search-bar { 
+        transition: all .2s ease-in-out; 
+        cursor: pointer;
+    }
+    
+    .search-bar:hover { 
+        transform: scale(1.1); 
+    }
 }

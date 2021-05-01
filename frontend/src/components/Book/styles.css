@@ -26,3 +26,14 @@
     text-align: left;
     margin-top: 0.2rem;
 }
+
+@media only screen and (min-width: 600px) {
+    .book { 
+        transition: all .2s ease-in-out; 
+        cursor: pointer;
+    }
+    
+    .book:hover { 
+        transform: scale(1.1); 
+    }
+}
