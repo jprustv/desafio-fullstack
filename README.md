@@ -40,3 +40,7 @@ Nesta tela é **obrigatório** que o usuário tenha possibilidade de:
 
 1. Criar um livro
 2. Form tenha validações
+
+### Instruções de instalação
+
+As instruções de como rodar este projeto se encontra no README das pastas frontend e backend
