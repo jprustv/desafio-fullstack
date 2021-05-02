@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "0c726e35-69ae-48e5-a6d8-22ec2eedcb4f",
+		"name": "The Books API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"The One Thing\",\r\n    \"author\" : \"Gary Keller\",\r\n    \"coverURL\" : \"https://images-na.ssl-images-amazon.com/images/I/819js3EQwbL.jpg\",\r\n    \"description\" : \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/api/v1/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"v1",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Recent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/v1/books/recent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"recent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/v1/books/details?id=14",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"details"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "14"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/api/v1/books/search?text=ha&per_page=5&current_page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"api",
+						"v1",
+						"books",
+						"search"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "ha"
+						},
+						{
+							"key": "per_page",
+							"value": "5"
+						},
+						{
+							"key": "current_page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
