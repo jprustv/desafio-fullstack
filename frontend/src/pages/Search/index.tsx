@@ -29,7 +29,7 @@ const Search: React.FC = () => {
 
   const initialPaginationState: IPagination = {
     total: 0,
-    per_page: 1,
+    per_page: 10,
     offset: 0,
     to: 0,
     last_page: 0,
@@ -53,11 +53,11 @@ const Search: React.FC = () => {
         }&current_page=${nextPage}`
       )
       .then((result) => {
-        console.log(result);
         setBooks(
           result.data.books.map((book: any) => {
             return {
               ...book,
+              title: book.name,
               coverURL: book.cover_url,
             };
           })

@@ -16,11 +16,11 @@ const Home: React.FC = () => {
     api
       .get('books/recent')
       .then((result) => {
-        console.log(result);
         setBooks(
           result.data.books.map((book: any) => {
             return {
               ...book,
+              title: book.name,
               coverURL: book.cover_url,
             };
           })

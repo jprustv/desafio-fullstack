@@ -1,6 +1,7 @@
 .book {
     margin-top: 0.4rem;
     text-align: left;
+    width: 100px;
 }
 
 .book .cover {
