@@ -18,6 +18,25 @@
     padding-bottom: 100px;
 }
 
+.search .container .load-more-container {
+    padding-left : 1rem;
+    padding-right: 1rem;
+}
+
+.search .container .load-more-container .load-more-button {
+    border: none;
+    width: 100%;
+    height: 40px;
+    background: #FF6978;
+    box-shadow: 5px 5px 80px rgb(212 173 134 / 49%);
+    border-radius: 10px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+}
+
 @media only screen and (min-width: 600px) {
     .search .container {
         margin-left : 4rem;
@@ -30,5 +49,18 @@
         flex-wrap: wrap;
         padding-left : 1rem;
         padding-right : 1rem;
+    }
+
+    .search .container .load-more-container {
+        width: 360px;
+    }
+
+    .search .container .load-more-container .load-more-button { 
+        transition: all .2s ease-in-out; 
+        cursor: pointer;
+    }
+    
+    .search .container .load-more-container .load-more-button:hover { 
+        transform: scale(1.1); 
     }
 }

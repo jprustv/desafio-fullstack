@@ -11,6 +11,51 @@ export default class BooksController {
   }
 
   async search(req: Request, res: Response) {
+    const per_page: any = req.query.per_page || 10;
+    let page: any = req.query.current_page || 1;
+    if (page < 1) page = 1;
+    const offset = (page - 1) * per_page;
+
+    return Promise.all([
+      db('books')
+        .where('name', 'like', `%${req.query.text}%`)
+        .orWhere('author', 'like', `%${req.query.text}%`)
+        .orWhere('description', 'like', `%${req.query.text}%`)
+        .count()
+        .first(),
+
+      db('books')
+        .where('name', 'like', `%${req.query.text}%`)
+        .orWhere('author', 'like', `%${req.query.text}%`)
+        .orWhere('description', 'like', `%${req.query.text}%`)
+        .offset(offset)
+        .limit(per_page),
+    ]).then(([total, rows]) => {
+      const pagination = {
+        total: 0,
+        per_page: 0,
+        offset: 0,
+        to: 0,
+        last_page: 0,
+        current_page: 0,
+        from: 0,
+        has_more: false,
+      };
+      const count = (total as any)['count(*)'];
+      pagination.total = count;
+      pagination.per_page = per_page;
+      pagination.offset = offset;
+      pagination.to = offset + rows.length;
+      pagination.last_page = Math.ceil(count / per_page);
+      pagination.current_page = page;
+      pagination.from = offset;
+      pagination.has_more = pagination.to < pagination.total;
+      return res.json({
+        books: rows,
+        pagination,
+      });
+    });
+
     const books = await db('books')
       .where('name', 'like', `%${req.query.text}%`)
       .orWhere('author', 'like', `%${req.query.text}%`)
@@ -21,7 +66,7 @@ export default class BooksController {
   }
 
   async recent(req: Request, res: Response) {
-    const books = await db('books').orderBy('date_added', 'desc').limit(9);
+    const books = await db('books').orderBy('date_added', 'desc').limit(10);
     return res.json({
       books,
     });
