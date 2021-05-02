@@ -4,25 +4,44 @@ import './styles.css';
 
 import ErrorOutlineIcon from '@material-ui/icons/ErrorOutline';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import api from '../../services/api';
+
 const Create: React.FC = () => {
   const [name, setName] = useState('');
   const [author, setAuthor] = useState('');
   const [coverURL, setCoverURL] = useState('');
   const [description, setDescription] = useState('');
 
-  const [errors, setErrors] = useState({
+  const initialErrorsState = {
     name: '',
     author: '',
     coverURL: '',
     description: '',
-  }) as any;
+  };
 
-  const [fieldIsValid, setFieldIsValid] = useState({
+  const initialFieldIsValidState = {
     name: false,
     author: false,
     coverURL: false,
     description: false,
-  }) as any;
+  };
+
+  const [errors, setErrors] = useState(initialErrorsState) as any;
+
+  const resetErrors = () => {
+    setErrors(initialErrorsState);
+  };
+
+  const [fieldIsValid, setFieldIsValid] = useState(
+    initialFieldIsValidState
+  ) as any;
+
+  const resetFieldIsValid = () => {
+    setFieldIsValid(initialFieldIsValidState);
+  };
 
   function validateField(fieldName: string, value: string) {
     let isValid = false;
@@ -80,12 +99,44 @@ const Create: React.FC = () => {
 
   function handleOnSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log('submit');
+
+    api
+      .post('books', {
+        name,
+        author,
+        coverURL,
+        description,
+      })
+      .then(() => {
+        setName('');
+        setAuthor('');
+        setCoverURL('');
+        setDescription('');
+        resetFieldIsValid();
+        resetErrors();
+        notify();
+      })
+      .catch(() => {
+        console.log('Error');
+      });
   }
+
+  const notify = () =>
+    toast.success('The book is added. Thanks for sharing it!');
 
   return (
     <article className="create">
       <div className="container">
+        <ToastContainer
+          position="top-center"
+          autoClose={4000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          pauseOnHover
+        />
         <div className="header">
           <div className="title">Add a new book</div>
         </div>
