@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './styles.css';
 
 import HandIcon from '../../assets/img/hand.svg';
 import Book, { BookProps } from '../../components/Book';
 
-import books from '../../services/books.json';
 import SearchBar from '../../components/SearchBar';
 
+import api from '../../services/api';
+
 const Home: React.FC = () => {
+  const [books, setBooks] = useState<BookProps[]>([]);
+
+  useEffect(() => {
+    api
+      .get('books/recent')
+      .then((result) => {
+        console.log(result);
+        setBooks(
+          result.data.books.map((book: any) => {
+            return {
+              ...book,
+              coverURL: book.cover_url,
+            };
+          })
+        );
+      })
+      .catch((err) => {});
+  }, []);
+
   return (
     <article className="home">
       <div className="container">

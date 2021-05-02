@@ -10,8 +10,31 @@ export default class BooksController {
     });
   }
 
+  async search(req: Request, res: Response) {
+    const books = await db('books')
+      .where('name', 'like', `%${req.query.text}%`)
+      .orWhere('author', 'like', `%${req.query.text}%`)
+      .orWhere('description', 'like', `%${req.query.text}%`);
+    return res.json({
+      books,
+    });
+  }
+
+  async recent(req: Request, res: Response) {
+    const books = await db('books').orderBy('date_added', 'desc').limit(9);
+    return res.json({
+      books,
+    });
+  }
+
+  async details(req: Request, res: Response) {
+    const details = await db('books').where({ _id: req.query.id });
+    return res.json({
+      details: details[0],
+    });
+  }
+
   async create(req: Request, res: Response) {
-    console.log(req.body);
     const { name, author, coverURL, description } = req.body;
 
     const trx = await db.transaction();

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import './styles.css';
 
@@ -12,16 +12,30 @@ import ReadIcon from '../../assets/img/book-open.svg';
 import HeadphonesIcon from '../../assets/img/headphones.svg';
 import ShareIcon from '../../assets/img/share.svg';
 
-import details from '../../services/details.json';
-
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import { NavigationContext } from '../../contexts/navigation';
 
+import api from '../../services/api';
+interface IDetails {
+  title: string;
+  subtitle?: string;
+  author: string;
+  coverURL: string;
+  description: string;
+}
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 const Detail: React.FC = () => {
+  const query = useQuery();
   const history = useHistory();
 
   const { setEnabled } = useContext(NavigationContext);
+
+  const [details, setDetails] = useState({} as IDetails);
 
   function handleBackButtonClick(e: React.MouseEvent) {
     e.preventDefault();
@@ -34,6 +48,22 @@ const Detail: React.FC = () => {
       setEnabled(true);
     };
   }, [setEnabled]);
+
+  useEffect(() => {
+    api
+      .get(`books/details?id=${query.get('id')}`)
+      .then((result) => {
+        let _details = result.data.details;
+        setDetails({
+          title: _details.name,
+          subtitle: '',
+          author: _details.author,
+          coverURL: _details.cover_url,
+          description: _details.description,
+        });
+      })
+      .catch((err) => {});
+  }, []);
 
   return (
     <article className="detail">
@@ -55,7 +85,7 @@ const Detail: React.FC = () => {
       <div className="content">
         <div className="title-container">
           <span className="title">{details.title}</span>
-          <span className="subtitle"> : {details.subtitle}</span>
+          {/* <span className="subtitle"> : {details.subtitle}</span> */}
         </div>
         <div className="author">{details.author}</div>
         <div className="description">{details.description}</div>
