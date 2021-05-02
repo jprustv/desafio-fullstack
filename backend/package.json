@@ -6,6 +6,7 @@
   "scripts": {
     "start": "tsnd --transpile-only --ignore-watch node_modules --respawn src/index.ts",
     "knex:migrate": "knex --knexfile src/knexfile.ts migrate:latest",
+    "knex:seed": "knex --knexfile src/knexfile.ts seed:run",
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix"
   },
