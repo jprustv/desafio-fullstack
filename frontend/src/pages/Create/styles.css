@@ -36,6 +36,37 @@
     justify-content: flex-start;
 }
 
+.create .container .content .create-form .form-error {
+    border: 1px solid;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    color : #da5757;
+    box-shadow: 0 0 0 4px #fcf4f4 inset;
+}
+
+.create .container .content .create-form .form-error .error-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.create .container .content .create-form .form-error .error-title {
+    font-size : 1.3rem;
+    text-align: center;
+    margin-top: 0.3rem;
+}
+
+.create .container .content .create-form .form-error .error-description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-top: 0.5rem;
+}
+
 .create .container .content .create-form .form-label {
     display: flex;
     flex-direction: column;
@@ -77,6 +108,10 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 29px;
+}
+
+.create .container .content .create-form .submit-button:disabled {
+    background: #dddddd;
 }
 
 @media only screen and (min-width: 600px) {
