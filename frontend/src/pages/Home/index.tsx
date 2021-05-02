@@ -37,7 +37,7 @@ const Home: React.FC = () => {
           <div className="welcome-bar">
             <div className="welcome-text">
               <span className="hi">Hi, </span>
-              <span className="user-name">Mehmed Al Fatih</span>
+              <span className="user-name">Jonathan Prust Vernizzi</span>
             </div>
             <img src={HandIcon} alt="" className="hand-icon" />
           </div>
