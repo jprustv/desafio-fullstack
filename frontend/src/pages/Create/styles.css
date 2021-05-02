@@ -1,0 +1,101 @@
+.create {
+    background-color : #FFF6E5;
+    height: 100%;
+}
+
+.create .container {
+    background-color: inherit;
+}
+
+.create .container .header {
+    padding: 2.5rem 1rem 1rem 1rem;
+}
+
+.create .container .header .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FF6978;
+    text-align: left;
+}
+
+.create .container .content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 100px;
+}
+
+.create .container .content .create-form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.create .container .content .create-form .form-label {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: flex-start;
+    width: 100%;
+
+    font-size: 16px;
+    line-height: 14px;
+    font-weight: bold;
+
+    margin-bottom: 2rem;
+}
+
+.create .container .content .create-form .form-label input, textarea {
+    width: 98%;
+    margin-top: 0.5rem;
+    border : none;
+    
+    background: #FDFCFC;
+    box-shadow: 5px 5px 80px rgba(212, 173, 134, 0.4926);
+    border-radius: 10px;
+}
+
+.create .container .content .create-form .form-label input {
+    height: 40px; 
+    text-indent: 0.8rem;
+}
+
+.create .container .content .create-form .submit-button {
+    border: none;
+    width: 97%;
+    height: 40px;
+    background: #FF6978;
+    box-shadow: 5px 5px 80px rgb(212 173 134 / 49%);
+    border-radius: 10px;
+    color: #fff;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .create .container {
+        margin-left : 4rem;
+        margin-right: 4rem;
+    }
+
+    .create .container .content {
+        width : 600px;
+    }
+
+    .create .container .content .create-form .submit-button { 
+        transition: all .2s ease-in-out; 
+        cursor: pointer;
+    }
+    
+    .create .container .content .create-form .submit-button:hover { 
+        transform: scale(1.04); 
+    }
+}

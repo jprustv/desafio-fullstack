@@ -177,6 +177,11 @@
         top: 80px;
     }
 
+    .detail .content {
+        margin-left : 4rem;
+        margin-right: 4rem;
+    }
+
     .detail .actions-menu .action-button, .detail .header .back-button { 
         transition: all .2s ease-in-out; 
         cursor: pointer;
@@ -186,7 +191,3 @@
         transform: scale(1.2); 
     }
 }
-
-/* .navigation {
-    display : none!important;
-} */
