@@ -19,8 +19,10 @@
 }
 
 .search .container .load-more-container {
+    margin-top: -80px;
     padding-left : 1rem;
     padding-right: 1rem;
+    padding-bottom: 100px;
 }
 
 .search .container .load-more-container .load-more-button {
