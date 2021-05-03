@@ -45,7 +45,7 @@ Nesta tela é **obrigatório** que o usuário tenha possibilidade de:
 
 Após conclusão do desafio, veja como ficou:
 
-
+![the-books-app](https://user-images.githubusercontent.com/11440704/116832941-284ff800-ab8d-11eb-8301-aef49c4c24d4.gif)
 
 ### Instruções de instalação
 
