@@ -8,6 +8,8 @@ app.use(cors());
 app.use(express.json());
 app.use('/api/v1/', routes);
 
-app.listen(3333, () => {
-  console.log('Backend listening on port 3333');
+const port = process.env.PORT || 3333;
+
+app.listen(port, () => {
+  console.log(`Backend listening on port ${port}`);
 });
