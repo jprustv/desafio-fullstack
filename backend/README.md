@@ -6,6 +6,8 @@
 
 ## Install
 
+Start by configuring database connection on src/knexfile.ts, then:
+
 ```sh
 yarn install
 yarn knex:migrate
